@@ -28,12 +28,24 @@ p {
   font-family: 'Poppins', sans-serif;
 }
 
+/*default card*/
+
 .container{
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   display: flex; 
   justify-content: center;
   align-items: center;
+}
+
+.card {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: 1s;
+  width: 380px;
+  height: 600px;
 }
 
 .image-container {
@@ -71,6 +83,18 @@ p {
       height: 800px;
     }
   }
+
+  unfold-btn {
+    border-radius: 50%;
+    background-color: black;
+  }
+  
+  span {
+    color: gray;
+  }
+
+  /*expanded card*/
+
   .text-on-image{
     z-index: 100;
     color: white; 
@@ -83,7 +107,7 @@ p {
     transform-origin: bottom;
   }
 
-  .text-on-image-header{
+  .text-on-image-header {
     font-size: 38px;
     font-family: 'Rubik', sans-serif;
     font-weight: bold;
@@ -101,8 +125,8 @@ p {
     top: 70%;
     right: 10%;
    }
-   
-   .number-of-comments{
+
+   .number-of-comments {
      padding-right: 5px;
    }
 
@@ -115,18 +139,6 @@ p {
     50%  { transform: translateY(-90px); }
     100% { transform: translateY(0); }
 }
-
-  .card {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    transition: 1s;
-    width: 380px;
-    height: 600px;
-  }
-  
-
   .close {
     z-index: 100;
     color: white; 
@@ -156,11 +168,3 @@ p {
     transform: rotate(-45deg);
   }
 
-unfold-btn {
-  border-radius: 50%;
-  background-color: black;
-}
-
-span{
-  color: gray;
-}
