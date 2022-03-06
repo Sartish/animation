@@ -55,16 +55,22 @@ p {
   }
 
   .image-container-resized {
-    width: 100%;
+    width: 110%;
     position: relative;
     transition: all 0.7s ease-out;
     object-fit: cover; 
     margin: 0;
     padding: 0;
-    min-height: 110vh;
+    min-height: 120vh;
     overflow: hidden;
   }
 
+  @media screen and (min-width: 1023px){
+    .image-container-resized {
+      width: 500px;
+      height: 800px;
+    }
+  }
   .text-on-image{
     z-index: 100;
     color: white; 
@@ -95,7 +101,7 @@ p {
     top: 70%;
     right: 10%;
    }
- 
+   
    .number-of-comments{
      padding-right: 5px;
    }
@@ -119,6 +125,7 @@ p {
     width: 380px;
     height: 600px;
   }
+  
 
   .close {
     z-index: 100;
