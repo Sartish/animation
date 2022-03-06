@@ -2,15 +2,26 @@ import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import city from "../assets/kuala-lumpur.jpg";
-import styles from "../styles/Home.module.css";
+import comment from "../assets/comment.png";
 
 export default function Home() {
   const [isImageOpen, setIsImageOpen] = useState(false);
   const [isCardOpen, setIsCardOpen] = useState(true);
 
-  const handleClick = () => {
+  const [imageContainerClassText, setImageContainerClassText] =
+    useState("image-container");
+
+  const handleClickOpen = () => {
     console.log("click");
+    setImageContainerClassText("image-container-resized");
     setIsImageOpen(true);
+    setIsCardOpen(false);
+  };
+
+  const handleClickClose = () => {
+    console.log("click");
+    setImageContainerClassText("image-container");
+    setIsImageOpen(false);
     setIsCardOpen(true);
   };
 
@@ -25,47 +36,72 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik&display=swap"
           rel="stylesheet"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <script
+          src="https://kit.fontawesome.com/a076d05399.js"
+          crossorigin="anonymous"
+        ></script>
       </Head>
-      <main>
-        <div className="h-screen flex items-center justify-center bg-black">
-          {/* <card className="bg-white rounded-lg w-[500px] h-[600px] flex items-center justify-center flex-col"> */}
-          <h1 className="mb-10">
-            <span>Shared</span> by you
-          </h1>
-          <div className="image-container">
-            <Image
-              className={"image"}
-              alt="Picture of the author"
-              src={city}
-              layout="fill"
-            />
-          </div>
-          {isCardOpen && (
-            <>
-              <h2 className="text-center font-Rubik text-4xl font-semibold mb-5 mt-5">
-                Lost in Tokyo
-              </h2>
-              <p className="text-center font-Poppins max-w-[370px] mb-10">
-                Tingling of the spine Apollonius of Perga cosmos Drake Equation
-                concept of the number one brain is the seed of intelligence.
-              </p>
-              <button className="text-center" onClick={handleClick}>
-                Expand
-              </button>
-            </>
-          )}
-          {isImageOpen && <h1 className="z-40 text-lg">hej</h1>}
-
-          {/* <card className="bg-white rounded-lg w-[500px] h-[600px] flex items-center justify-evenly flex-col relative">
+      <main className="container">
+        <div>
+          <card className="card">
+            {isCardOpen && (
+              <h1 className="mb-10">
+                Shared <span>by you</span>
+              </h1>
+            )}
+            <div className={imageContainerClassText}>
               <Image
-                className="flex z-10 rounded-lg transition duration-150 ease."
+                className={"image"}
                 alt="Picture of the author"
                 src={city}
                 layout="fill"
-              ></Image>
-              <h1 className="z-40 text-white text-lg">hej</h1>
-            </card> */}
+              />
+            </div>
+            {isCardOpen && (
+              <>
+                <h2 className="text-center font-Rubik text-4xl font-semibold mb-5 mt-5">
+                  Lost in Tokyo
+                </h2>
+                <p className="p-4">
+                  Tingling of the spine Apollonius of Perga cosmos Drake
+                  Equation concept of the number one brain is the seed of
+                  intelligence.
+                </p>
+                <button
+                  className="text-center bg-black rounded-full p-3"
+                  onClick={handleClickOpen}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="white"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                    />
+                  </svg>
+                </button>
+              </>
+            )}
+            {isImageOpen && (
+              <div>
+                <a href="#" className="close" onClick={handleClickClose} />
+                <div className="text-on-image bounce">
+                  <h1 className="text-on-image-header">Lost in Tokyo</h1>
+                  <p>by Johan</p>
+                  <div className="comment-container">
+                    <p className="number-of-comments">8</p>
+                    <Image height={25} width={25} src={comment}></Image>
+                  </div>
+                </div>
+              </div>
+            )}
+          </card>
         </div>
       </main>
     </>
