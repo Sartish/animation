@@ -11,7 +11,7 @@ export default function Home() {
   const handleClick = () => {
     console.log("click");
     setIsImageOpen(true);
-    setIsCardOpen(false);
+    setIsCardOpen(true);
   };
 
   return (
@@ -28,20 +28,21 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className="h-screen flex items-center justify-center bg-gray-900">
+        <div className="h-screen flex items-center justify-center bg-black">
+          {/* <card className="bg-white rounded-lg w-[500px] h-[600px] flex items-center justify-center flex-col"> */}
+          <h1 className="mb-10">
+            <span>Shared</span> by you
+          </h1>
+          <div className="image-container">
+            <Image
+              className={"image"}
+              alt="Picture of the author"
+              src={city}
+              layout="fill"
+            />
+          </div>
           {isCardOpen && (
-            <card className="bg-white rounded-lg w-[500px] h-[600px] flex items-center justify-center flex-col">
-              <h1 className="mb-10">
-                <span>Shared</span> by you
-              </h1>
-              <Image
-                className="rounded-lg"
-                alt="Picture of the author"
-                width={380}
-                height={270}
-                src={city}
-              ></Image>
-
+            <>
               <h2 className="text-center font-Rubik text-4xl font-semibold mb-5 mt-5">
                 Lost in Tokyo
               </h2>
@@ -52,20 +53,19 @@ export default function Home() {
               <button className="text-center" onClick={handleClick}>
                 Expand
               </button>
-            </card>
+            </>
           )}
+          {isImageOpen && <h1 className="z-40 text-lg">hej</h1>}
 
-          {isImageOpen && (
-            <card className="bg-white rounded-lg w-[500px] h-[600px] flex items-center justify-evenly flex-col relative">
+          {/* <card className="bg-white rounded-lg w-[500px] h-[600px] flex items-center justify-evenly flex-col relative">
               <Image
-                className="flex z-10 rounded-lg"
+                className="flex z-10 rounded-lg transition duration-150 ease."
                 alt="Picture of the author"
                 src={city}
                 layout="fill"
               ></Image>
               <h1 className="z-40 text-white text-lg">hej</h1>
-            </card>
-          )}
+            </card> */}
         </div>
       </main>
     </>
