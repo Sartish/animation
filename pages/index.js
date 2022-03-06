@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import city from "../assets/kuala-lumpur.jpg";
+import city from "../assets/city.jpg";
 import comment from "../assets/comment.png";
 
 export default function Home() {
