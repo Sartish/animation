@@ -102,8 +102,8 @@ p {
     top: 60%;
     left: 10%;
     font-family: 'Rubik', sans-serif;
-    animation-duration: 0.7s;
-    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-iteration-count: 2;
     transform-origin: bottom;
   }
 
