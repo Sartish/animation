@@ -67,7 +67,7 @@ p {
   }
 
   .image-container-resized {
-    width: 110%;
+    width: 110vw;
     position: relative;
     transition: all 0.7s ease-out;
     object-fit: cover; 
