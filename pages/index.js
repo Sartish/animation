@@ -37,68 +37,64 @@ export default function Home() {
           rel="stylesheet"
         />
       </Head>
-      <main className="container">
-        <div>
-          <card className="card">
-            {isCardOpen && (
-              <h1 className="mb-10">
-                Shared <span>by you</span>
-              </h1>
-            )}
-            <div className={imageContainerClassText}>
-              <Image
-                className={"image"}
-                alt="Picture of the author"
-                src={city}
-                layout="fill"
-              />
-            </div>
-            {isCardOpen && (
-              <>
-                <h2 className="text-center font-Rubik text-4xl font-semibold mb-2 mt-5">
-                  Lost in Tokyo
-                </h2>
-                <p className="p-4 text-center mb-2">
-                  Tingling of the Perga cosmos Drake Equation concept of the
-                  number one brain is the seed of intelligence.
-                </p>
-                <button
-                  className="text-center bg-black rounded-full p-3"
-                  onClick={handleClickOpen}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-6 w-6"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="white"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
-                    />
-                  </svg>
-                </button>
-              </>
-            )}
-            {isImageOpen && (
-              <div>
-                <button className="close" onClick={handleClickClose} />
-                <div className="text-on-image bounce">
-                  <h1 className="text-on-image-header">Lost in Tokyo</h1>
-                  <p>by Johan</p>
-                </div>
-                <div className="comment-container">
-                  <p className="number-of-comments">8</p>
-                  <Image height={30} width={30} src={comment}></Image>
-                </div>
-              </div>
-            )}
-          </card>
+      <card className="card">
+        {isCardOpen && (
+          <h1 className="mb-10">
+            Shared <span>by you</span>
+          </h1>
+        )}
+        <div className={imageContainerClassText}>
+          <Image
+            className={"image"}
+            alt="Picture of the author"
+            src={city}
+            layout="fill"
+          />
         </div>
-      </main>
+        {isCardOpen && (
+          <>
+            <h2 className="text-center font-Rubik text-4xl font-semibold mb-2 mt-5">
+              Lost in Tokyo
+            </h2>
+            <p className="p-4 text-center mb-2">
+              Tingling of the Perga cosmos Drake Equation concept of the number
+              one brain is the seed of intelligence.
+            </p>
+            <button
+              className="text-center bg-black rounded-full p-3"
+              onClick={handleClickOpen}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="white"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"
+                />
+              </svg>
+            </button>
+          </>
+        )}
+        {isImageOpen && (
+          <div>
+            <button className="close" onClick={handleClickClose} />
+            <div className="text-on-image bounce">
+              <h1 className="text-on-image-header">Lost in Tokyo</h1>
+              <p>by Johan</p>
+            </div>
+            <div className="comment-container">
+              <p className="number-of-comments">8</p>
+              <Image height={30} width={30} src={comment}></Image>
+            </div>
+          </div>
+        )}
+      </card>
     </>
   );
 }
