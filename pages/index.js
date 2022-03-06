@@ -95,7 +95,7 @@ export default function Home() {
                   <p>by Johan</p>
                   <div className="comment-container">
                     <p className="number-of-comments">8</p>
-                    <Image height={25} width={25} src={comment}></Image>
+                    <Image height={30} width={30} src={comment}></Image>
                   </div>
                 </div>
               </div>
