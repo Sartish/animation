@@ -89,10 +89,10 @@ export default function Home() {
                 <div className="text-on-image bounce">
                   <h1 className="text-on-image-header">Lost in Tokyo</h1>
                   <p>by Johan</p>
-                  <div className="comment-container">
-                    <p className="number-of-comments">8</p>
-                    <Image height={30} width={30} src={comment}></Image>
-                  </div>
+                </div>
+                <div className="comment-container">
+                  <p className="number-of-comments">8</p>
+                  <Image height={30} width={30} src={comment}></Image>
                 </div>
               </div>
             )}
