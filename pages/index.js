@@ -63,9 +63,8 @@ export default function Home() {
                   Lost in Tokyo
                 </h2>
                 <p className="p-4">
-                  Tingling of the spine Apollonius of Perga cosmos Drake
-                  Equation concept of the number one brain is the seed of
-                  intelligence.
+                  Tingling of the Perga cosmos Drake Equation concept of the
+                  number one brain is the seed of intelligence.
                 </p>
                 <button
                   className="text-center bg-black rounded-full p-3"
@@ -90,7 +89,7 @@ export default function Home() {
             )}
             {isImageOpen && (
               <div>
-                <a href="#" className="close" onClick={handleClickClose} />
+                <button className="close" onClick={handleClickClose} />
                 <div className="text-on-image bounce">
                   <h1 className="text-on-image-header">Lost in Tokyo</h1>
                   <p>by Johan</p>
