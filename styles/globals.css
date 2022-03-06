@@ -24,7 +24,7 @@ body {
   box-sizing: border-box;
 }
 
-p{ 
+p { 
   font-family: 'Poppins', sans-serif;
 }
 
@@ -34,7 +34,6 @@ p{
   display: flex; 
   justify-content: center;
   align-items: center;
-  border: 2px solid black;
 }
 
 .image-container {
@@ -81,7 +80,7 @@ p{
   .text-on-image-header{
     font-size: 38px;
     font-family: 'Rubik', sans-serif;
-    font-weight: 1000;
+    font-weight: bold;
   }
 
   .comment-container {
@@ -93,7 +92,7 @@ p{
     z-index: 100;
     color: white; 
     position: absolute;
-    top: 68%;
+    top: 70%;
     right: 10%;
    }
  
@@ -107,7 +106,7 @@ p{
 }
 @keyframes bounce {
     0%   { transform: translateY(0); }
-    50%  { transform: translateY(-50px); }
+    50%  { transform: translateY(-90px); }
     100% { transform: translateY(0); }
 }
 

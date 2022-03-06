@@ -53,7 +53,7 @@ export default function Home() {
         </div>
         {isCardOpen && (
           <>
-            <h2 className="text-center font-Rubik text-4xl font-semibold mb-2 mt-5">
+            <h2 className="text-center font-Rubik text-5xl font-semibold mb-2 mt-5">
               Lost in Tokyo
             </h2>
             <p className="p-4 text-center mb-2">
@@ -85,7 +85,9 @@ export default function Home() {
           <div>
             <button className="close" onClick={handleClickClose} />
             <div className="text-on-image bounce">
-              <h1 className="text-on-image-header">Lost in Tokyo</h1>
+              <h1 className="text-center font-Rubik text-5xl font-semibold">
+                Lost in Tokyo
+              </h1>
               <p>by Johan</p>
             </div>
             <div className="comment-container">
