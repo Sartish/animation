@@ -55,10 +55,10 @@ export default function Home() {
             </div>
             {isCardOpen && (
               <>
-                <h2 className="text-center font-Rubik text-4xl font-semibold mb-5 mt-5">
+                <h2 className="text-center font-Rubik text-4xl font-semibold mb-2 mt-5">
                   Lost in Tokyo
                 </h2>
-                <p className="p-4 text-center">
+                <p className="p-4 text-center mb-2">
                   Tingling of the Perga cosmos Drake Equation concept of the
                   number one brain is the seed of intelligence.
                 </p>
