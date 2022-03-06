@@ -46,7 +46,7 @@ export default function Home() {
         <div className={imageContainerClassText}>
           <Image
             className={"image"}
-            alt="Picture of the author"
+            alt="Picture tokyo"
             src={city}
             layout="fill"
           />
@@ -92,7 +92,12 @@ export default function Home() {
             </div>
             <div className="comment-container">
               <p className="number-of-comments">8</p>
-              <Image height={30} width={30} src={comment}></Image>
+              <Image
+                alt="icon of a comment"
+                height={30}
+                width={30}
+                src={comment}
+              ></Image>
             </div>
           </div>
         )}
