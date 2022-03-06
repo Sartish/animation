@@ -36,10 +36,6 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik&display=swap"
           rel="stylesheet"
         />
-        <script
-          src="https://kit.fontawesome.com/a076d05399.js"
-          crossOrigin="anonymous"
-        ></script>
       </Head>
       <main className="container">
         <div>
