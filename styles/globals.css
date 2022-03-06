@@ -61,7 +61,7 @@ p {
     object-fit: cover; 
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    min-height: 110vh;
     overflow: hidden;
   }
 
@@ -115,7 +115,7 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: 0.3s;
+    transition: 1s;
     width: 380px;
     height: 600px;
   }
